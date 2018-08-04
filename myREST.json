@@ -1,0 +1,40 @@
+{
+  "wsproducts": [
+    {
+      "id": 1,
+      "name": "Aggretsuko",
+      "price": 65000,
+      "description": "Very Very Angry"
+    },
+    {
+      "id": 2,
+      "name": "Gudetama",
+      "price": 34000,
+      "description": "Egg"
+    },
+    {
+      "id": 3,
+      "name": "Pom pom purin",
+      "price": 9,
+      "description": "ice cream"
+    },
+    {
+      "id": 4,
+      "name": "Shinkansen",
+      "price": 25000,
+      "description": "train"
+    },
+    {
+      "id": 5,
+      "name": "Chococat",
+      "price": 85000,
+      "description": "Cat"
+    },
+    {
+      "id": 6,
+      "name": "SugarBunnies",
+      "price": 65000,
+      "description": "Bunny Boi"
+    }
+  ]
+}

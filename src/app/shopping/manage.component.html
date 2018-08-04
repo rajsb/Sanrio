@@ -1,0 +1,55 @@
+<h4 style="margin-bottom: 30px;">Manage</h4>
+
+<form class="form-group">
+  <div class="form-row col-md-12">
+    <div class="col-lg-4">
+
+      <input placeholder="Product Id" class="form-control col-md-4" name="txtId" readonly [(ngModel)]="frmProduct.id">
+      <br>
+    </div>
+    <div class="col-lg-6">
+      <input placeholder="Enter Product Name" class="form-control col-md-4" name="txtName" [(ngModel)]="frmProduct.name">
+    </div>
+    <div class="col-lg-2">
+      <button class="btn changeButton" (click)="update(frmProduct.id)">Update</button>
+    </div>
+  </div>
+  <div class="form-row col-md-12">
+    <div class="col-lg-4">
+      <input placeholder="Enter Product Price" class="form-control col-md-4" name="txtPrice" [(ngModel)]="frmProduct.price">
+
+      <br>
+    </div>
+    <div class="col-lg-6">
+      <input placeholder="Enter Description" class="form-control col-md-4" name="txtDesc" [(ngModel)]="frmProduct.description">
+    </div>
+    <div class="col-lg-2">
+      <button class="btn changeButton" (click)="add()">Add</button>
+
+    </div>
+  </div>
+</form>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngIf="manageProducts.length == 0">
+    <th colspan="4">No items Found.</th>
+  </tr>
+  <tr *ngFor="let mp of manageProducts">
+    <td>{{mp.id}}</td>
+    <td>{{mp.name | uppercase }}</td>
+    <!-- <td>{{mp.name | uppercase | reverseText}}</td> -->
+    <td>{{mp.price | currency: 'GBP'}}</td>
+    <td>{{mp.description }}</td>
+    <td>
+      <button class="btn btn-danger" (click)="delete(mp.id)">Delete</button>&nbsp;
+      <button class="btn btn-success" (click)="edit(mp)">Edit</button>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+body {
+    font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.whiteBox {
+    margin-top: 50px;
+}
+
+nav {
+    box-shadow: 0px 0px 1px 1px #a9a9a9
+}
+
+.changeButton {
+    /* background-color: #333333; #343a40 */
+    background-color: #343a40;
+    width: 103px;  
+    color: white;
+    height: 40px;
+    border-radius: 2px;
+    border-width: 0px;
+    margin-left: 10px;
+ }
+ 
+ .changeButton:hover {
+     background-color:#515151;
+     cursor: pointer;
+ }

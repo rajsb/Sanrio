@@ -1,0 +1,36 @@
+<nav class="navbar bg-dark navbar-expand-lg navbar-dark">
+    <a routerLink="/" class="navbar-brand">{{appHeading}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/cart">Cart</a>
+            </li>
+            <li class="nav-item" *ngIf="!isUserLoggedIn()">
+                <a class="nav-link" routerLink="/signIn">Sign In</a>
+            </li>
+            <li class="nav-item" *ngIf="isUserLoggedIn()">
+                <a class="nav-link" routerLink="/signOut" (click)="doSignOut()">Sign Out</a>
+            </li>
+            <li class="nav-item" *ngIf="!isUserLoggedIn()">
+                <a class="nav-link" routerLink="/signUp">Sign Up</a>
+            </li>
+            <li class="nav-item" *ngIf="isUserLoggedIn()">
+                <a class="nav-link" routerLink="/manage">Manage Products</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="whiteBox">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<div style="margin-top: 70px;margin-left: 50%">
+    <!-- <span>{{todaysDate | date}}</span> -->
+</div>
